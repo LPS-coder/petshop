@@ -28,10 +28,10 @@ CREATE TABLE IF NOT EXISTS animais (
 ) ENGINE=InnoDB;
 
 INSERT INTO clientes (nome, email, telefone) VALUES
-('João da Silva', 'joao@email.com', '(11) 99999-8888'),
-('Maria Oliveira', 'maria@email.com', '(11) 97777-6666');
+('Davi Batista', 'davi@email.com', '(47) 99967-6678'),
+('Otto', 'Otto@email.com', '(47) 97894-6767');
 
 INSERT INTO animais (cliente_id, nome, especie, raca, idade) VALUES
-(1, 'Thor', 'Cachorro', 'Labrador', 5),
-(1, 'Mel', 'Gato', 'Siamês', 3),
-(2, 'Bob', 'Cachorro', 'Poodle', 2);
+(1, 'Cecatto', 'Cachorro', 'Pinscher', 5),
+(1, 'Nordeley', 'Gato', 'Pelado', 3),
+(2, 'Borges', 'Cachorro', 'Yorkshire', 2);

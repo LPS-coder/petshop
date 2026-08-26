@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ':email' => $email,
                 ':telefone' => $telefone
             ]);
-            
-            // Redireciona para a listagem após salvar
+
             header('Location: listar_clientes.php?sucesso=1');
             exit;
         } catch (PDOException $e) {
