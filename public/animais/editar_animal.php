@@ -73,6 +73,41 @@ try {
         <p style="color: red;"><?= htmlspecialchars($mensagem) ?></p>
     <?php endif; ?>
 
-    
+    <form method="POST" action="">
+        <div>
+            <label for="cliente_id">Responsável *:</label><br>
+            <select id="cliente_id" name="cliente_id" required>
+                <option value="">-- Selecione o Responsável --</option>
+                <?php foreach ($clientes as $c): ?>
+                    <option value="<?= $c['id'] ?>" <?= ($animal['cliente_id'] == $c['id']) ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($c['nome']) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="nome">Nome do Pet *:</label><br>
+            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($animal['nome']) ?>" required>
+        </div>
+        <br>
+        <div>
+            <label for="especie">Espécie *:</label><br>
+            <input type="text" id="especie" name="especie" value="<?= htmlspecialchars($animal['especie']) ?>" required>
+        </div>
+        <br>
+        <div>
+            <label for="raca">Raça:</label><br>
+            <input type="text" id="raca" name="raca" value="<?= htmlspecialchars($animal['raca']) ?>">
+        </div>
+        <br>
+        <div>
+            <label for="idade">Idade (anos):</label><br>
+            <input type="number" id="idade" name="idade" min="0" value="<?= htmlspecialchars($animal['idade']) ?>">
+        </div>
+        <br>
+        <button type="submit">Atualizar Animal</button>
+        <a href="listar_animais.php">Cancelar</a>
+    </form>
 </body>
 </html>
